@@ -1,0 +1,32 @@
+
+    <div class="main">
+        <div class="inline-b tables" >
+
+            <div class="table-group clearfix" ng-repeat="tablegroup in tableInfo">
+                <div class="panel-title">{{tablegroup.groupName}}</div>
+                <div class="table-item" ng-repeat="tableTemp in tablegroup.tables" ng-click="getmenu(tableTemp.tableId)">
+                    <div class="remind-tab" ng-show="tableTemp.showFlag">
+                        <div class="arrow"></div>
+                        ...
+                    </div>
+                    {{tableTemp.tableNum}}号桌
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="inline-b left-content">
+            <ul class="nav nav-tabs" role="tablist" id="myTab">
+                <li role="presentation" class="themenu active"><a id="menu-tab" href="#themenu" role="tab" data-toggle="tab">菜单管理</a></li>
+                <li role="presentation" class="message"><a id="message-tab" href="#message" role="tab" data-toggle="tab">消息管理</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="themenu">themenu</div>
+                <div role="tabpanel" class="tab-pane" id="message">message</div>
+            </div>
+        </div>
+    </div>
+
